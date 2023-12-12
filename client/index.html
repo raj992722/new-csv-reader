@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <title>CSV Viewer</title>
+</head>
+<body>
+  <h1>CSV READER</h1>
+  <form id="fileForm" enctype="multipart/form-data">
+    <input type="file" id="fileInput" name="file" accept=".csv" />
+    <button  onclick="uploadFile()">Upload</button>
+  </form>
+  <div id="fileList"></div>
+  <select id="selectFile" onchange="loadData()">
+    <option value="" disabled selected>Select a file</option>
+  </select>
+  <input type="text" id="searchInput" oninput="searchTable()" placeholder="Search...">
+  <table id="dataTable"></table>
+  <script src="/script.js"></script>
+</body>
+</html>
